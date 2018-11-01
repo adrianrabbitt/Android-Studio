@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context="com.example.adrian.firebase.Settings">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:background="#FFA500"
+        android:elevation="4dp"
+        android:text="Settings"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:text="Settings"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="Discovery Settings"
+                android:layout_marginTop="25dp"
+                android:textColor="#3b444c"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <android.support.v7.widget.CardView
+
+
+                android:layout_width="match_parent"
+                android:id="@+id/location"
+                android:layout_height="45dp"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_centerHorizontal="true"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardCornerRadius="10dp"
+
+                card_view:cardElevation="3dp"
+
+
+
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:elevation="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_gravity="top"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+
+                        android:layout_width="82dp"
+                        android:layout_height="69dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:gravity="center"
+                        android:text="Viewing in"
+
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="69dp"
+                        android:id="@+id/searchLocation"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif-"
+                        android:gravity="center"
+                        android:text="My Current Location"
+                        android:textColor="#0040ff"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="Change your swipe location to see Jobder members
+in other citys" > </TextView>
+
+
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="match_parent"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardCornerRadius="10dp"
+
+                card_view:cardElevation="3dp"
+
+                android:layout_height="135dp"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+
+                android:layout_marginTop="20dp"
+                android:elevation="4dp">
+
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Show Me"
+                    android:textColor="#FFA500"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:gravity="center"
+
+                        android:text="Men"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="54dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="140dp"
+                        android:checked="true"
+                        android:shadowColor="#FFA500"
+
+                        android:switchMinWidth="56dp"
+                        android:text="Switch1:"
+                        android:textOff="OFF"
+                        android:textOn="ON" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="80dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:gravity="center"
+
+                        android:text="Women"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="54dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="113dp"
+                        android:checked="true"
+                        android:shadowColor="#FFA500"
+
+                        android:switchMinWidth="56dp"
+                        android:text="Switch1:"
+                        android:textOff="OFF"
+                        android:textOn="ON" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardCornerRadius="10dp"
+
+                card_view:cardElevation="3dp"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Maxium Distance"
+                    android:textColor="#FFA500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="255dp"
+                    android:layout_marginTop="35dp"
+
+                    android:textColor="#FFA500"
+                    android:textSize="20sp" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="288dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="70dp" />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardCornerRadius="10dp"
+
+                card_view:cardElevation="3dp"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="35dp"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Age Range"
+                    android:textColor="#FFA500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+
+                    android:id="@+id/age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="255dp"
+                    android:layout_marginTop="35dp"
+                    android:textColor="#FFA500"
+                    android:textSize="20sp" />
+
+                <SeekBar
+                    android:id="@+id/seekBar2"
+                    android:layout_width="288dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="70dp" />
+
+
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+
+                android:textSize="14sp"
+                android:text="Jobder uses these preferences to retrieve profiles
+ profiles may not fall within your range." > </TextView>
+
+
+            <android.support.v7.widget.CardView
+
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardCornerRadius="10dp"
+
+                card_view:cardElevation="3dp"
+
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_centerHorizontal="true"
+
+
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:elevation="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Notifications"
+                        android:textColor="#FFA500"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <Switch
+                        android:id="@+id/notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:checked="true"
+                        android:shadowColor="#FFA500"
+
+                        android:switchMinWidth="56dp"
+
+                        android:textOff="OFF"
+                        android:textOn="ON" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardCornerRadius="10dp"
+
+                card_view:cardElevation="3dp"
+
+                android:layout_marginTop="20dp"
+                android:elevation="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="150dp"
+
+                    android:orientation="vertical">
+
+                    <TextView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif-light"
+
+                        android:gravity="center"
+                        android:text="Legal"
+                        android:textColor="#FFA500"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                     android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+  android:textSize="15sp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Licenses"
+
+
+                        />
+
+                    <TextView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Privacy Policy"
+
+
+                        />
+
+                    <TextView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="Terms of Service"
+
+
+                        />
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                card_view:cardCornerRadius="10dp"
+
+                card_view:cardElevation="3dp"
+
+
+                android:layout_width="match_parent"
+                android:layout_marginBottom="70dp"
+                android:id="@+id/logout"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_centerHorizontal="true"
+
+
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:elevation="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="                   Logout"
+                        android:layout_gravity="center"
+                        android:textColor="#FFA500"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="12dp"
+                        android:textStyle="bold"
+
+                        />
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>

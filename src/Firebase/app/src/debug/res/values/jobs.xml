@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array name="jobsarray">
+        <item>Plumber</item>
+        <item>Gardening</item>
+        <item>Bartender</item>
+        <item>Farming</item>
+        <item>Electrician</item>
+        <item>Painter</item>
+        <item>Pet Carer</item>
+        <item>Carpenter</item>
+
+
+
+    </string-array>
+</resources>

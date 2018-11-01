@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EE7600"
+
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <ImageView
+
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:id="@+id/file"
+        android:src="@drawable/file"/>
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext3"
+        android:scrollbars="vertical"
+        android:backgroundTint="#fff"
+
+        android:textColor="#ffff"
+        android:layout_marginTop="15dp"
+        android:maxLines="8"
+        android:hint="Enter File Name.."
+        android:textColorHint="#ffff"
+        android:padding="10dp" />
+</LinearLayout>

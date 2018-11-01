@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<meta content="Jobder" name="author">
+	      <title>Jobder</title>
+		  
+		 <!-- References
+		      https://getbootstrap.com/docs/3.3/getting-started/ using bootstrap;
+		      https://fontawesome.com/ for icons and fonts
+			  https://themify.me/themify-icons for icons
+			  https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp
+			  When I was developing the app at the start I was using html and css however when 
+			  I started to implement bootstarp it made it much easier to develop.
+		
+		 . -->
+
+
+	<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="./css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+	  <link href="./css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="./css/themify-icons.css" rel="stylesheet" type="text/css">
+          	<link href="./css/jobder.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="se-pre-con"></div>
+	<div class="header">
+		          <section class="intro-section" id="intro">
+			<div class="top-menu-bar">
+				<nav class="menubar menubar-default" data-offset-top="50" data-spy="affix">
+					<div class="container">
+		
+                 <!--  https://stackoverflow.com/questions/39223952/accessibility-sr-only-or-aria-label?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa -->
+				<div class="menubar-header">
+							<button class="menubar-toggle" data-target="#menubar" data-toggle=
+				            			"collapse" type="button"><span class="sr-only">Toggle menu bar</span>
+							<span class="icon-bar"></span> <span class="icon-bar"></span>
+							            <span class="icon-bar"></span></button> <a class="menubar-jobder logo"
+						     	href="index.html"><img alt="" src="./img/logo.png"></a>
+					          	</div>
+								
+						<!-- https://stackoverflow.com/questions/23535289/bootstrap-3-disable-navbar-collapse?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa -->
+						<div class="collapse menubar-collapse" id="menubar">
+							<ul class="nav menubar-nav">
+								<li>
+									<a href="index.html"><i aria-hidden="true" class=
+									"fa fa-home fa-fw"></i> Home <i class="fa fa-angle-left"></i></a>
+								</li>
+								<li>
+									<a href="#"><i aria-hidden="true" class="fa fa-book fa-fw"></i>
+									Employers <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown">
+										
+					           					<li>
+											<a href="manage-jobs.html">Manage Jobs</a>
+										</li>
+									
+										
+				       					</ul>
+								</li>
+								<li>
+									<a href="#"><i aria-hidden="true" class="fa fa-user fa-fw"></i>
+									Employees <i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown">
+										
+				      					</ul>
+								</li>
+							</ul>
+							
+							<!-- https://www.w3schools.com/howto/howto_css_topnav_right.asp -->
+							<ul class="nav menubar-nav menubar-right float-right">
+								
+								<li class="right">
+									<a href="login.html"><i class="ti-lock"></i> Log In</a>
+								</li>
+							</ul>
+						</div>
+				           	</div>
+				                	<ul class="top-menu">
+						<li>
+							<a class="active" href="index.html">Home</a>
+					         	</li>
+						<li>
+							<a href="#">Employers</a>
+							<ul>
+								
+								<li>
+									<a href="manage-jobs.html">Manage Jobs</a>
+								</li>
+								
+								<li>
+									<a href="browse-cvs.html">Browse CVs</a>
+								</li>
+							</ul>
+				            		</li>
+				      		<li>
+							<a href="#">Employees</a>
+							<ul>
+								<li>
+									<a href="add-cv.html">Add CV</a>
+								</li>
+								<li>
+									<a href="manage-cvs.html">Manage CVs</a>
+				        	 			</li>
+							
+							</ul>
+						</li>
+						
+					                   	<li class="btn-m">
+							<a href="login.html"><i class="ti-lock"></i> Log In</a>
+						</li>
+					</ul>
+				</nav>
+			             </div>
+		        	<div class="search-container">
+					
+					
+					
+				<div class="container">
+			              		<div class="row">
+						<div class="col-md-12">
+							<div class="content">
+				        				<form action="post" method="get">
+									<div class="row">
+										
+										<div class="col-md-4 col-sm-6">
+											<div class="form-group">
+												<input class="form-control" placeholder=
+												"City / County / Town / Eircode" type="email"> <i class=
+												"ti-location-pin"></i>
+									               		</div>
+					            					</div>
+										<div class="col-md-3 col-sm-6">
+											<div class="category-search-container">
+									         			<label class="styled-select"><select class=
+												"dropdown-product selectpicker">
+													<option>
+														Plumber
+													</option>
+													<option>
+									   					Gardening
+												         	</option>
+													<option>
+														Bartender
+												      	</option>
+													<option>
+														Farming 
+													</option>
+													 <option>
+														Electircian
+									      				</option>
+													          <option>
+											   			Pet Carrer
+												 	</option>
+												      	<option>
+														Carpenter
+													</option>
+													
+													
+												</select></label>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-6">
+										
+										</div>
+					 				</div>
+								</form>
+							</div>
+							<div class="popular-keywords">
+								<b>New Employment:</b> <a href="#">Plumbing</a> <a href=
+					"#">Carpentry</a> <a href="#">Vet</a>
+						</div>
+					</div>
+					</div>
+			</div>
+			</div>
+	</section>
+	           </div>
+	
+	        <section class="job-search section">
+		<div class="container">
+	      		<h3 class="section-title" style="color: blue;">Available Employees</h3>
+	            		<div class="row">
+		           		<div class="col-md-12">
+					<div class="job-list">
+						<div class="job-list-content">
+							<h4><a >Adrian Rabbitt</a> <span class=
+							"full-time">Full-Time</span></h4>
+							<p>I am a good worker and willing to work</p>
+							<div class="job-tag">
+								<div class="pull-left">
+									<div class="meta-tag">
+									
+									     	<span><a href="browse-categories.html"><i class="ti-brush"></i>Plumbing
+						</a></span> <span><i class="ti-location-pin"></i>Galway,
+										IRL</span> <span><i class="ti-time"></i></span>
+									</div>
+								</div>
+								<div class="pull-right">
+									<div class="icon">
+								       		<i class="ti-heart"></i>
+											<!-- https://getbootstrap.com/docs/4.0/components/buttons/ creatied own buttons with reference to -->
+									</div><a class="btn btn-common btn-rm">More
+									Details</a>
+								</div>
+							</div>
+						</div>
+					                </div>
+					            <div class="job-list">
+						<div class="job-list-content">
+							<h4><a href="job-details.html"> Tom Jones</a> <span class=
+							"full-time">Full-Time</span></h4>
+							<p> I am a good worker and willing to work.</p>
+										<div class="job-tag">
+								<div class="pull-left">
+									<div class="meta-tag">
+												<span><a href="browse-categories.html"><i class=
+										"ti-desktop"></i>Painter</a></span> <span><i class=
+										"ti-location-pin"></i>Galway, Ireland</span> <span><i class=
+										"ti-time"></i></span>
+									</div>
+								</div>
+								<div class="pull-right">
+									<div class="icon">
+										<i class="ti-heart"></i>
+									</div><a class="btn btn-common btn-rm" href="job-details.html">More
+									Details</a>
+								</div>
+							</div>
+						 </div>
+					              </div>
+					         
+						
+					  
+			
+			</div>
+		</div>
+	</section>
+	
+	         <section id="counter">
+		            <div class="container">
+			<div class="row">
+		                		<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="counting">
+						<div class="icon">
+							<i class="ti-home"></i>
+						</div>
+			           			<div class="desc">
+							<h2>Employment</h2>
+							<h3 class="counter">150</h3>
+						</div>
+					</div>
+				        </div>
+				     <div class="col-md-3 col-sm-6 col-xs-12">
+			         		<div class="counting">
+				             		<div class="icon">
+							<i class="ti-briefcase"></i>
+						</div>
+				     		<div class="desc">
+							<h2>Jobs</h2>
+							<h3 class="counter">5550</h3>
+								</div>
+					</div>
+				           </div>
+			      	<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="counting">
+						<div class="icon">
+							<i class="ti-user"></i>
+						</div>
+						<div class="desc">
+							<h2>Employees</h2>
+							<h3 class="counter">400</h3>
+						</div>
+					</div>
+				           </div>
+		           		<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="counting">
+						<div class="icon">
+							<i class="ti-write"></i>
+						</div>
+						<div class="desc">
+							<h2>CVs</h2>
+							<h3 class="counter">340</h3>
+						</div>
+					</div>
+			          	</div>
+		     	</div>
+		</div>
+	        </section>
+		<footer>
+		<section class="footer-Content">
+			<div class="container">
+				<div class="row"></div>
+			</div>
+		</section>
+	</footer><a class="back-to-top" href="#"><i class="ti-arrow-up"></i></a> 
+	   <script src="./js/jquery-min.js" type="text/javascript">
+	           </script> 
+	<script src="./js/bootstrap.min.js" type="text/javascript">
+	</script> 
+	            <script src="./js/bootstrap-select.min.js" type="text/javascript">
+	</script> 
+	<script src="./js/jquery.counterup.min.js" type="text/javascript">
+	</script> 
+	       <script src="./js/waypoints.min.js" type="text/javascript">
+	</script> <!-- Needed for the counter   https://stackoverflow.com/questions/44069995/js-count-numbers-one-at-the-time?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa-->
+	 
+	<script src="./js/jobder.js" type="text/javascript">
+	</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F0F0F0"
+    android:layout_height="match_parent"
+    tools:context="com.example.adrian.firebase.Rating"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#FFA500"
+        android:elevation="4dp"
+        android:textAlignment="center"
+
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="45dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/ic_email_black_24dp" />
+
+        <TextView
+            android:id="@+id/toolbarT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#ffff"
+            android:layout_marginLeft="15dp"
+            android:text="Toolbar Title" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#ffff"
+            android:layout_marginLeft="10dp"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ListView
+        android:id="@+id/list_of_ratings"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+
+
+        android:divider="#FF9900"
+        android:dividerHeight="6px"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/rate" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/smessage"
+        android:orientation="vertical">
+
+        <RatingBar
+            android:id="@+id/rate"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressTint="#FFA500"
+
+            android:scaleX=".75"
+
+
+            android:scaleY=".75"
+
+
+            android:stepSize="1" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="5dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/edittext"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+
+                android:hint="Enter Review"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="1"
+                android:minLines="6"
+                android:scrollbars="vertical"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/ic_email_black_24dp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

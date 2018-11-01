@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<meta content="Jobder" name="author">
+	<title>Jobder</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	
+	
+	
+	<!-- Bootstrap CSS -->
+		 <!-- References
+		      https://getbootstrap.com/docs/3.3/getting-started/ using bootstrap;
+		      https://fontawesome.com/ for icons and fonts
+			  https://themify.me/themify-icons for icons
+			  https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp
+			  
+		
+		 . -->
+	
+	
+	<link href="./css/bootstrap-select.min.css" rel="stylesheet" type="text/css">
+	<link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="./css/themify-icons.css" rel="stylesheet">
+	<link href="./css/jobder.css" rel="stylesheet" type="text/css">
+	<!-- Main Styles -->
+        </head>
+<body>
+	<div class="se-pre-con"></div>
+	<div class="header">
+						<!-- Header Section Start -->
+		<div class="top-menu-bar">
+			    <nav class="menubar menubar-default main-navigation" data-offset-top="50"
+		           	data-spy="affix" role="navigation">
+							<div class="container">
+					<div class="menubar-header">
+						<button class="menubar-toggle" data-target="#menubar" data-toggle=
+						"collapse" type="button"><span class="sr-only">Toggle menu bar</span>
+								<span class="icon-bar"></span> <span class="icon-bar"></span>
+						<span class="icon-bar"></span></button> <a class="menubar-jobder logo"
+					           	href="index.html"><img alt="" src="./img/logo.png"></a>
+						</div>
+							<div class="menubar-collapse" id="menubar">
+							<!-- Menu bar -->
+						<ul class="nav menubar-nav">
+										<li>
+				         				<a href="index.html"><i aria-hidden="" class=
+				       				"fa fa-home fa-fw"></i> Home <i class="fa fa-angle-left"></i></a>
+							</li>
+							<li>
+								<a href="#"><i aria-hidden="true" class="fa fa-book fa-fw"></i>
+									Employers <i class="fa fa-angle-down"></i></a>
+										<ul class="dropdown">
+									<li>
+										<a href="manage-jobs.html">Statistics</a>
+											</li>
+									
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i aria-hidden="true" class="fa fa-user fa-fw"></i>
+								
+								
+										Employees <i class="fa fa-angle-down"></i></a>
+								<ul class="dropdown">
+								
+								</ul>
+							</li>
+						</ul>
+								<ul class="nav menubar-nav menubar-right float-right">
+							
+							
+						</ul>
+					</div>
+				</div>
+								<ul class="top-menu">
+					<li>
+						<a class="active" href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="#">Employers</a>
+						<ul>
+			 			
+						</ul>
+					</li>
+				      	<li>
+						<a href="#">Employees</a>
+								<ul>
+							
+						</ul>
+				     	</li>
+					
+							<li class="btn-m">
+						<a href="login.html"><i class="ti-lock"></i> Log In</a>
+					</li>
+				</ul>
+			</nav>
+			</div><!-- Header Section End -->
+				<div class="page-header" style="background-color:orange">
+				
+				
+			
+			<div class="container">
+					<div class="row">
+					<div class="col-md-12">
+					<!-- https://v4-alpha.getbootstrap.com/components/breadcrumb/-->
+							<div class="breadcrumb-wrapper">
+								<h2 class="product-title">Statistics</h2>
+								<ol class="breadcrumb">
+								<li>
+											<a href="index.html"><i class="ti-home"></i> Home</a>
+								</li>
+								<li class="current">Manage Jobs</li>
+								</ol>
+						</div>
+							</div>
+				</div>
+			</div>
+		</div><!-- Page Header End -->
+		<div id="content">
+		
+		
+		
+		
+		<body>
+
+
+		 <!-- https://www.fusioncharts.com/dev/chart-guide/getting-started/building-your-first-chart-->
+
+
+    <script src="fusioncharts-suite-xt/js/fusioncharts.js"></script>
+    <script src="fusioncharts-suite-xt/js/fusioncharts.charts.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+    <script>
+    var config = {
+      apiKey: "AIzaSyD0FXoIvlAGjKdeWu9Q2oyEQFy9fiE1Obs",
+      authDomain: "fir-e6d19.firebaseapp.com",
+      databaseURL: "https://fir-e6d19.firebaseio.com",
+      projectId: "fir-e6d19",
+      storageBucket: "gs://fir-e6d19.appspot.com",
+      messagingSenderId: "395552461617"
+    };
+      firebase.initializeApp(config);
+      window.addEventListener("load", getData(genFunction));
+	  window.addEventListener("load", getData2(genFunction2));
+
+     
+ function getData(callbackIN) {
+        var ref = firebase.database().ref("data");
+        ref.once('value').then(function (snapshot) {
+          callbackIN(snapshot.val())
+        });
+      }
+	  
+	   function getData2(callbackIN) {
+        var ref = firebase.database().ref("data2");
+        ref.once('value').then(function (snapshot) {
+          callbackIN(snapshot.val())
+        });
+      }
+
+      function genFunction(data) {
+        var cdata = [];
+        var len = data.length;
+        for(var i=1; i<len; i++) {
+          cdata.push({
+            label: data[i]['label'],
+            value: data[i]['value']
+          });
+        }
+
+
+      var firebaseChart = new FusionCharts({
+          type: 'area2d',
+          renderAt: 'chart-container',
+          width: '650',
+          height: '400',
+          dataFormat: 'json',
+          dataSource: {
+              "chart": {
+                  "caption": "Statistics of Different Jobs",
+                  "subCaptionFontBold": "0",
+                  "captionFontSize": "20",
+                  "subCaptionFontSize": "17",
+                  "captionPadding": "15",
+                  "captionFontColor": "#0000FF",
+                  "baseFontSize": "14",
+                  "baseFont": "Barlow",
+                  "canvasBgAlpha": "0",
+                  "bgColor": "#FFFFFF",
+                  "bgAlpha": "100",
+                  "showBorder": "0",
+                  "showCanvasBorder": "0",
+                  "showPlotBorder": "0",
+                  "showAlternateHGridColor": "0",
+                  "usePlotGradientColor": "0",
+                  "paletteColors": "#6AC1A5",
+                  "showValues": "0",
+                  "divLineAlpha": "5",
+                  "showAxisLines": "1",
+                  "drawAnchors": "0",
+                  "xAxisLineColor": "#8C8C8C",
+                  "xAxisLineThickness": "0.7",
+                  "xAxisLineAlpha": "50",
+                  "yAxisLineColor": "#8C8C8C",
+                  "yAxisLineThickness": "0.7",
+                  "yAxisLineAlpha": "50",
+                  "baseFontColor": "#8C8C8C",
+                  "toolTipBgColor": "#FA8D67",
+                  "toolTipPadding": "10",
+                  "toolTipColor": "#FFFFFF",
+                  "toolTipBorderRadius": "3",
+                  "toolTipBorderAlpha": "0",
+                  "drawCrossLine": "1",
+                  "crossLineColor": "#8C8C8C",
+                  "crossLineAlpha": "60",
+                  "crossLineThickness": "0.7",
+                  "alignCaptionWithCanvas": "1"
+              },
+              "data": cdata
+          }
+      });
+
+      firebaseChart.render();
+
+ 
+
+      var firebaseChart2 = new FusionCharts({
+          type: 'pie3d',
+          renderAt: 'chart-container2',
+          width: '650',
+          height: '400',
+          dataFormat: 'json',
+          dataSource: {
+              "chart": {
+                  "caption": "Statitics of Different Jobs (Pie Chart)",
+                  "subCaptionFontBold": "0",
+                  "captionFontSize": "20",
+                  "subCaptionFontSize": "17",
+                  "captionPadding": "15",
+                  "captionFontColor": "#0000FF",
+                  "baseFontSize": "14",
+                  "baseFont": "Barlow",
+                  "canvasBgAlpha": "0",
+                  "bgColor": "#FFFFFF",
+                  "bgAlpha": "100",
+                  "showBorder": "0",
+                  "showCanvasBorder": "0",
+                  "showPlotBorder": "0",
+                  "showAlternateHGridColor": "0",
+                  "usePlotGradientColor": "0",
+                  "paletteColors": "#0040ff",
+                  "showValues": "0",
+                  "divLineAlpha": "5",
+                  "showAxisLines": "1",
+                  "drawAnchors": "0",
+                  "xAxisLineColor": "#8C8C8C",
+                  "xAxisLineThickness": "0.7",
+                  "xAxisLineAlpha": "50",
+                  "yAxisLineColor": "#8C8C8C",
+                  "yAxisLineThickness": "0.7",
+                  "yAxisLineAlpha": "50",
+                  "baseFontColor": "#8C8C8C",
+                  "toolTipBgColor": "#FA8D67",
+                  "toolTipPadding": "10",
+                  "toolTipColor": "#FFFFFF",
+                  "toolTipBorderRadius": "3",
+                  "toolTipBorderAlpha": "0",
+                  "drawCrossLine": "1",
+                  "crossLineColor": "#8C8C8C",
+                  "crossLineAlpha": "60",
+                  "crossLineThickness": "0.7",
+                  "alignCaptionWithCanvas": "1"
+              },
+              "data": cdata
+          }
+      });
+
+      firebaseChart2.render();
+
+
+      var firebaseChart3 = new FusionCharts({
+          type: 'pareto3d',
+          renderAt: 'chart-container3',
+          width: '650',
+          height: '400',
+          dataFormat: 'json',
+          dataSource: {
+              "chart": {
+                  "caption": "Bar Chart of Users",
+                  "subCaptionFontBold": "0",
+                  "captionFontSize": "20",
+                  "subCaptionFontSize": "17",
+                  "captionPadding": "15",
+                  "captionFontColor": "#0000FF",
+                  "baseFontSize": "14",
+                  "baseFont": "Barlow",
+                  "canvasBgAlpha": "0",
+                  "bgColor": "#FFFFFF",
+                  "bgAlpha": "100",
+                  "showBorder": "0",
+                  "showCanvasBorder": "0",
+                  "showPlotBorder": "0",
+                  "showAlternateHGridColor": "0",
+                  "usePlotGradientColor": "0",
+                  "paletteColors": "#009900",
+                  "showValues": "0",
+                  "divLineAlpha": "5",
+                  "showAxisLines": "1",
+                  "drawAnchors": "0",
+                  "xAxisLineColor": "#8C8C8C",
+                  "xAxisLineThickness": "0.7",
+                  "xAxisLineAlpha": "50",
+                  "yAxisLineColor": "#8C8C8C",
+                  "yAxisLineThickness": "0.7",
+                  "yAxisLineAlpha": "50",
+                  "baseFontColor": "#8C8C8C",
+                  "toolTipBgColor": "#FA8D67",
+                  "toolTipPadding": "10",
+                  "toolTipColor": "#FFFFFF",
+                  "toolTipBorderRadius": "3",
+                  "toolTipBorderAlpha": "0",
+                  "drawCrossLine": "1",
+                  "crossLineColor": "#8C8C8C",
+                  "crossLineAlpha": "60",
+                  "crossLineThickness": "0.7",
+                  "alignCaptionWithCanvas": "1"
+              },
+              "data": cdata
+          }
+      });
+
+      firebaseChart3.render();
+
+      var firebaseChart4 = new FusionCharts({
+          type: 'doughnut3d',
+          renderAt: 'chart-container4',
+          width: '650',
+          height: '400',
+          dataFormat: 'json',
+          dataSource: {
+              "chart": {
+                  "caption": "Jobder Visitors Trend",
+                  "subCaptionFontBold": "0",
+                  "captionFontSize": "20",
+                  "subCaptionFontSize": "17",
+                  "captionPadding": "15",
+                  "captionFontColor": "#8C8C8C",
+                  "baseFontSize": "14",
+                  "baseFont": "Barlow",
+                  "canvasBgAlpha": "0",
+                  "bgColor": "#FFFFFF",
+                  "bgAlpha": "100",
+                  "showBorder": "0",
+                  "showCanvasBorder": "0",
+                  "showPlotBorder": "0",
+                  "showAlternateHGridColor": "0",
+                  "usePlotGradientColor": "0",
+                  "paletteColors": "#0040ff",
+                  "showValues": "0",
+                  "divLineAlpha": "5",
+                  "showAxisLines": "1",
+                  "drawAnchors": "0",
+                  "xAxisLineColor": "#8C8C8C",
+                  "xAxisLineThickness": "0.7",
+                  "xAxisLineAlpha": "50",
+                  "yAxisLineColor": "#8C8C8C",
+                  "yAxisLineThickness": "0.7",
+                  "yAxisLineAlpha": "50",
+                  "baseFontColor": "#8C8C8C",
+                  "toolTipBgColor": "#FA8D67",
+                  "toolTipPadding": "10",
+                  "toolTipColor": "#FFFFFF",
+                  "toolTipBorderRadius": "3",
+                  "toolTipBorderAlpha": "0",
+                  "drawCrossLine": "1",
+                  "crossLineColor": "#8C8C8C",
+                  "crossLineAlpha": "60",
+                  "crossLineThickness": "0.7",
+                  "alignCaptionWithCanvas": "1"
+              },
+              "data": cdata
+          }
+      });
+
+      firebaseChart4.render();
+
+
+      }
+	  
+	  
+	  
+	  function genFunction2(data) {
+        var sdata = [];
+        var len = data.length;
+        for(var i=1; i<len; i++) {
+          sdata.push({
+            label: data[i]['label'],
+            value: data[i]['value']
+          });
+        }
+
+
+
+      var firebaseChart2 = new FusionCharts({
+          type: 'pie3d',
+          renderAt: 'chart-container2',
+          width: '650',
+          height: '400',
+          dataFormat: 'json',
+          dataSource: {
+              "chart": {
+                  "caption": "Statistics of Gend ",
+                  "subCaptionFontBold": "0",
+                  "captionFontSize": "20",
+                  "subCaptionFontSize": "17",
+                  "captionPadding": "15",
+                  "captionFontColor": "#0000FF",
+                  "baseFontSize": "14",
+                  "baseFont": "Barlow",
+                  "canvasBgAlpha": "0",
+                  "bgColor": "#FFFFFF",
+                  "bgAlpha": "100",
+                  "showBorder": "0",
+                  "showCanvasBorder": "0",
+                  "showPlotBorder": "0",
+                  "showAlternateHGridColor": "0",
+                  "usePlotGradientColor": "0",
+                  "paletteColors": "#FFA500",
+                  "showValues": "0",
+                  "divLineAlpha": "5",
+                  "showAxisLines": "1",
+                  "drawAnchors": "0",
+                  "xAxisLineColor": "#8C8C8C",
+                  "xAxisLineThickness": "0.7",
+                  "xAxisLineAlpha": "50",
+                  "yAxisLineColor": "#8C8C8C",
+                  "yAxisLineThickness": "0.7",
+                  "yAxisLineAlpha": "50",
+                  "baseFontColor": "#8C8C8C",
+                  "toolTipBgColor": "#FA8D67",
+                  "toolTipPadding": "10",
+                  "toolTipColor": "#FFFFFF",
+                  "toolTipBorderRadius": "3",
+                  "toolTipBorderAlpha": "0",
+                  "drawCrossLine": "1",
+                  "crossLineColor": "#8C8C8C",
+                  "crossLineAlpha": "60",
+                  "crossLineThickness": "0.7",
+                  "alignCaptionWithCanvas": "1"
+              },
+              "data": sdata
+          }
+      });
+
+      firebaseChart2.render();
+
+      var firebaseChart2 = new FusionCharts({
+          type: 'pie3d',
+          renderAt: 'chart-container2',
+          width: '650',
+          height: '400',
+          dataFormat: 'json',
+          dataSource: {
+              "chart": {
+                  "caption": "Statitics of Different Jobs (Pie Chart)",
+                  "subCaptionFontBold": "0",
+                  "captionFontSize": "20",
+                  "subCaptionFontSize": "17",
+                  "captionPadding": "15",
+                  "captionFontColor": "#0000FF",
+                  "baseFontSize": "14",
+                  "baseFont": "Barlow",
+                  "canvasBgAlpha": "0",
+                  "bgColor": "#FFFFFF",
+                  "bgAlpha": "100",
+                  "showBorder": "0",
+                  "showCanvasBorder": "0",
+                  "showPlotBorder": "0",
+                  "showAlternateHGridColor": "0",
+                  "usePlotGradientColor": "0",
+                  "paletteColors": "#1a8cff",
+                  "showValues": "0",
+                  "divLineAlpha": "5",
+                  "showAxisLines": "1",
+                  "drawAnchors": "0",
+                  "xAxisLineColor": "#8C8C8C",
+                  "xAxisLineThickness": "0.7",
+                  "xAxisLineAlpha": "50",
+                  "yAxisLineColor": "#8C8C8C",
+                  "yAxisLineThickness": "0.7",
+                  "yAxisLineAlpha": "50",
+                  "baseFontColor": "#8C8C8C",
+                  "toolTipBgColor": "#FA8D67",
+                  "toolTipPadding": "10",
+                  "toolTipColor": "#FFFFFF",
+                  "toolTipBorderRadius": "3",
+                  "toolTipBorderAlpha": "0",
+                  "drawCrossLine": "1",
+                  "crossLineColor": "#8C8C8C",
+                  "crossLineAlpha": "60",
+                  "crossLineThickness": "0.7",
+                  "alignCaptionWithCanvas": "1"
+              },
+              "data": cdata
+          }
+      });
+
+      firebaseChart2.render();
+
+
+      
+
+     
+
+
+      }
+
+    </script>
+
+<center>
+		<p class="main-des" > The Android application Jobder is a virtual Employment System for all fields and skills of work. The application will try and overcome the employment barriers that numerous people are faced with. The main target group I hope to help are students, people with no qualifications and poor lexical skills. The android application consists of two modes: The Employer and the Employee. The Employee is responsible for filling in his/her details. The Employee’s main responsibility is creating/editing their profile, viewing their conversation and uploading relevant achievements as snapshots. e.g Safe Pass.</p>
+        <div id="chart-container" >
+
+
+          </div>
+		   <div id="chart-container3"  >
+
+
+            </div>
+		  
+          <div id="chart-container2"  >
+
+
+            </div>
+
+           
+		</center>
+  <head>
+ 
+		<style>
+      #map {
+        height: 400px;
+        width: 60%;
+		left:100px;
+       }
+			</style>
+			</head>
+  <center>
+							<body>
+							<!-- 
+			<h3> Users Over the World on Jobder</h3>
+    <div id="map"></div>
+	
+	
+	 
+
+
+						<script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+			var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV2DgHYplhbxX1Zth96pPb4WvNMm6JToE&callback=initMap">
+    </script>
+	-->
+  </body>
+  </center>
+						</html>
+
+
+					<div id="user_div" class="loggedin-div">
+   
+
+		<p id="user_para"> You're currently logged in.</p>
+
+					<button onclick="logout()">Logout</button>
+  </div>
+</div>
+
+
+	
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+
+						<script src="profile.js"></script>
+
+						</body>
+		
+			</div>
+			<footer>
+			<section class="footer-Content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12"></div>
+					</div>
+				</div>
+			</section>
+				</footer><a class="back-to-top" href="#"><i class="ti-arrow-up"></i></a> 
+			<script src="./js/jquery-min.js" type="text/javascript">
+						</script> 
+				<script src="./js/bootstrap.min.js" type="text/javascript">
+			</script> 
+			<script src="./js/bootstrap-select.min.js" type="text/javascript">
+			</script> 
+		<script src="./js/jobder.js" type="text/javascript">
+				</script>
+	</div>
+</body>
+</html>

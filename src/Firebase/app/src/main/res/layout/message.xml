@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:orientation="horizontal"
+>
+
+
+        <TextView
+            android:id="@+id/message_user2"
+            android:layout_width="wrap_content"
+            android:maxWidth="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:background="@drawable/cir"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:textColor="#ffff"
+            android:layout_toEndOf="@+id/message_user"
+            android:textAllCaps="true"
+            android:layout_toRightOf="@+id/message_user" />
+
+        <TextView
+            android:id="@+id/message_text2"
+            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_below="@+id/message_user"
+            android:background="@drawable/rounda"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+           />
+    </LinearLayout>
+
+
+</RelativeLayout>
