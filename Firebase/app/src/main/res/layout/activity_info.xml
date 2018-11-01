@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    tools:context="com.example.adrian.firebase.Info">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFA500"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="Info"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/content_info" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is Jobder? "
+        android:textColor="#FFA500"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:textStyle="italic"
+
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jobder is a virtual Employment System for all fields and skills of work. The application will try and overcome the employment barriers that numerous people are faced with. The main target group I hope to help are students, people with no qualifications and poor lexical skills. The application will consist of two modes: The Employer and the Employee. The Employee is responsible for filling in his/her details. The Employee’s main features will consist of creating/editing their profile, viewing their conversations and swapping jobs if in search."
+
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="#FFA500"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How does Jobder work? "
+            android:textColor="#FFA500"
+            android:layout_marginLeft="15dp"
+            android:textSize="20sp"
+            android:textStyle="italic"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jobder is a virtual Employment System for all fields and skills of work. The application will try and overcome the employment barriers that numerous people are faced with. The main target group I hope to help are students, people with no qualifications and poor lexical skills. The application will consist of two modes: The Employer and the Employee. The Employee is responsible for filling in his/her details. The Employee’s main features will consist of creating/editing their profile, viewing their conversations and swapping jobs if in search."
+
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="#FFA500"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is my Profile? "
+            android:textColor="#FFA500"
+            android:layout_marginLeft="15dp"
+            android:textSize="20sp"
+            android:textStyle="italic"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jobder is a virtual Employment System for all fields and skills of work. The application will try and overcome the employment barriers that numerous people are faced with. The main target group I hope to help are students, people with no qualifications and poor lexical skills. The application will consist of two modes: The Employer and the Employee. The Employee is responsible for filling in his/her details. The Employee’s main features will consist of creating/editing their profile, viewing their conversations and swapping jobs if in search."
+
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="#FFA500"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What does the web application consist off? "
+            android:textColor="#FFA500"
+            android:layout_marginLeft="15dp"
+            android:textSize="20sp"
+            android:textStyle="italic"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jobder is a virtual Employment System for all fields and skills of work. The application will try and overcome the employment barriers that numerous people are faced with. The main target group I hope to help are students, people with no qualifications and poor lexical skills. The application will consist of two modes: The Employer and the Employee. The Employee is responsible for filling in his/her details. The Employee’s main features will consist of creating/editing their profile, viewing their conversations and swapping jobs if in search."
+
+            android:layout_marginLeft="15dp"
+            android:textSize="16sp"
+            android:textStyle="normal"
+
+            />
+
+</LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

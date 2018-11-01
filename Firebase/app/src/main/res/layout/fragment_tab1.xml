@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#Ffff"
+    tools:context="com.example.adrian.firebase.Tab1Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#F0F0F0"
+        android:layout_height="match_parent"
+        tools:context="com.example.adrian.firebase.Rating"
+        android:orientation="vertical">
+
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listViewImage"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:orientation="vertical">
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="5dp" />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    </FrameLayout>

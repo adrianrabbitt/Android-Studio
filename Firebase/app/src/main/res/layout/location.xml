@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Please Enter the location"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editext"
+        android:hint="Enter Address"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:src="@drawable/ic_location_on_black_24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="69dp"
+            android:id="@+id/searchLocation"
+            android:layout_gravity="center"
+          android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="sans-serif-"
+            android:gravity="center"
+            android:text="My Current Location"
+            android:textColor="#0040ff"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.adrian.firebase.MainActivity"
+    android:layout_gravity="center"
+    android:id="@+id/splash_screen"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#FF9900"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="234dp"
+        android:layout_height="240dp"
+
+        android:layout_marginTop="130dp"
+        android:layout_weight="0.01"
+        android:background="@drawable/bones" />
+
+    <com.trncic.library.DottedProgressBar
+        android:id="@+id/progress"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:foregroundGravity="center"
+        app:activeDot="@drawable/active"
+        android:layout_marginTop="305dp"
+        app:dotSize="14dp"
+        app:inactiveDot="@drawable/circle2"
+        android:layout_marginLeft="50dp"
+        app:jumpingSpeed="100"
+        app:spacing="6dp" />
+
+</android.widget.RelativeLayout>
