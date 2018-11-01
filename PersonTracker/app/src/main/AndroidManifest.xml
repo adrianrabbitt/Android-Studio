@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.adria.persontracker">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logosplash"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".Parent"
+            android:label="Person Tracker"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Client" />
+        <activity android:name=".Loginclient" />
+        <activity android:name=".personalinfo" />
+        <activity android:name=".FindAdress" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".settings"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".password"
+            android:label="@string/title_activity_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DistanceControl"
+            android:label="@string/title_activity_distance_control"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddUser"
+            android:label="@string/title_activity_add_user"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".register"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Update"
+            android:label="@string/title_activity_update"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".History"
+            android:label="@string/title_activity_history"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GetPersonal"
+            android:label="@string/title_activity_get_personal"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <service android:name=".SendService"/>
+        <service android:name=".RecieveService"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#FFFFFF"
+    tools:context="com.example.adria.persontracker.register">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="414dp"
+        android:orientation="vertical"
+        android:gravity="center|bottom"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:text="Update coordinates every:"
+            android:textSize="20sp"
+
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" />
+
+        <RadioButton android:id="@+id/onem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="5 minutes "
+            android:textSize="20sp"
+            android:onClick="onRadioButtonClicked"/>
+
+
+        <RadioButton android:id="@+id/fivem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:text="10 minutes"
+            android:onClick="onRadioButtonClicked"/>
+
+
+        <RadioButton android:id="@+id/tenm"
+            android:layout_width="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content"
+            android:text="15 minutes"
+            android:textSize="20sp"
+            android:onClick="onRadioButtonClicked"/>
+
+
+
+    </RadioGroup>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,45 @@
+package com.example.adria.persontracker;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+
+public class splash extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash);
+      final  ImageView iv = (ImageView)findViewById(R.id.imageView);
+        Animation an = AnimationUtils.loadAnimation(getBaseContext(),R.animator.rotate);
+       final Animation an2 = AnimationUtils.loadAnimation(getBaseContext(),R.drawable.fadeout);
+
+        iv.startAnimation(an);
+
+        an.setAnimationListener(new Animation.AnimationListener() {
+
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                iv.startAnimation(an2);
+                finish();
+                Intent intent = new Intent(splash.this,MainActivity.class);
+                startActivity(intent);
+                iv.startAnimation(an2);
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
+}

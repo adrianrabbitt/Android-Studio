@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.adria.persontracker.DistanceControl">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:progress="50"
+        android:id="@+id/distancebar" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/distance"
+        android:textSize="40sp"
+        android:layout_gravity="center" android:layout_alignParentBottom="true"/>
+
+
+    <RadioGroup
+        android:layout_width="208dp"
+        android:layout_height="185dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal|bottom"
+        android:weightSum="1">
+
+
+        <RadioButton
+            android:text="KM"
+            android:textSize="20sp"
+            android:id="@+id/km"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_weight="0.3"/>
+
+        <RadioButton
+            android:text="M"
+            android:textSize="20sp"
+            android:id="@+id/m"
+            android:layout_width="105dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" />
+    </RadioGroup>
+
+
+</android.support.design.widget.CoordinatorLayout>

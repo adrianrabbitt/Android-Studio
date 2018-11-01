@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="555dp"
+        android:padding="80dp"
+        tools:context=".Parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <Button
+
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:id = "@+id/admin"
+            android:layout_gravity="center_vertical|center_horizontal"
+
+            android:layout_weight="0.3"
+            android:background ="@drawable/pcustom1"
+            android:text="Admin"/>
+
+
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:id="@+id/getlocation"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background ="@drawable/pcustom1"
+            android:layout_weight="0.3"
+            android:text="Show Location "
+            />
+
+
+
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:id="@+id/getAdress"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background ="@drawable/pcustom1"
+            android:layout_weight="0.3"
+            android:text="Show Clients Adress "
+            />
+
+
+        <Button
+            android:id="@+id/history"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background ="@drawable/pcustom1"
+            android:layout_weight="0.3"
+            android:text="Show History"/>
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

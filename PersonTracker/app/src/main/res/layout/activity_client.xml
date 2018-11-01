@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="#3F51B5"
+    tools:context=".Parent">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/getlocation2"
+        android:background ="@drawable/pcustom1"
+        android:text="Show Current Location"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/getAdress2"
+        android:background ="@drawable/pcustom1"
+        android:text="Show Adress "/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background ="@drawable/pcustom1"
+        android:id="@+id/personaldata"
+        android:text="Personal Data"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background ="@drawable/pcustom1"
+        android:id="@+id/findadress"
+        android:onClick="findadress"
+        android:text="Send Coordinates"/>
+
+</LinearLayout>
